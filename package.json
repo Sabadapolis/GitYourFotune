@@ -1,7 +1,7 @@
 {
-    "name": "nodeangularstarterkitwithmaterial",
-    "description": "A starter project for anyone wanting to build an Angular SPA app with Angular Material, using NodeJS",
-    "author": "Ryan Ward",
+    "name": "gityourfotune",
+    "description": "Magic 8 Ball Simulator",
+    "author": "Ryan Ward & Chris Sabadach",
     "version": "1.0.0",
     "main": "server.js",
     "dependencies": {
