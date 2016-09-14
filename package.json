@@ -1,0 +1,28 @@
+{
+    "name": "nodeangularstarterkitwithmaterial",
+    "description": "A starter project for anyone wanting to build an Angular SPA app with Angular Material, using NodeJS",
+    "author": "Ryan Ward",
+    "version": "1.0.0",
+    "main": "server.js",
+    "dependencies": {
+        "express": "*", 
+        "angular": "*", 
+        "angular-route": "*",
+        "angular-material": "*", 
+        "angular-aria": "*", 
+        "angular-messages": "*", 
+        "angular-animate": "*"
+    }, 
+    "devDependencies": {
+        "grunt": "*", 
+        "grunt-contrib-jshint": "*", 
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-uglify": "*", 
+        "grunt-contrib-sass": "*",
+        "grunt-contrib-cssmin": "*", 
+        "grunt-contrib-watch": "*", 
+        "grunt-nodemon": "*",
+        "grunt-concurrent": "*",
+        "grunt-open": "*"
+    }
+}

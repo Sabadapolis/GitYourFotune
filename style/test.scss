@@ -1,0 +1,9 @@
+.test-item
+{
+    color: red;
+
+    &.blue
+    {
+        color: blue !important;
+    }
+}
