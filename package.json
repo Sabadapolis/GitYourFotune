@@ -11,7 +11,8 @@
         "angular-material": "*", 
         "angular-aria": "*", 
         "angular-messages": "*", 
-        "angular-animate": "*"
+        "angular-animate": "*",
+        "body-parser": "*"
     }, 
     "devDependencies": {
         "grunt": "*", 
