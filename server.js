@@ -1,7 +1,14 @@
 var express = require('express');
 var app = express();
 var api = require('./server/api/api');
+var config = require('./server/config/config');
+var mongoose = require('mongoose');
 var appMiddleware = require('./server/middleware/appMiddleware')(app);
+
+mongoose.Promise = global.Promise 
+mongoose.connect(config.db.url, function(err) {
+	if(err) throw err;
+});
 
 // Configure the API
 app.use('/api', api);
