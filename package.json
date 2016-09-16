@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "main": "server.js",
     "dependencies": {
+        "lodash": "*",
         "mongoose": "*",
         "express": "*", 
         "angular": "*", 
