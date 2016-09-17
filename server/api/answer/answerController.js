@@ -22,6 +22,8 @@ exports.getAll = function (req, res){
 //////////// POST FUNCTIONS ////////////
 
 exports.addAnswer = function(req, res){
+    // This will take the content of the body property from the request, and pass it into the DTO (Data Type Object) and convert 
+    // the body into something we can use in code.
     var newAnswer = new answerDto(req.body);
 
     answer.create(newAnswer).then(function(success){
