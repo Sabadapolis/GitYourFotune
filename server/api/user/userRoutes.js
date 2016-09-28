@@ -2,11 +2,16 @@ var router = require('express').Router();
 var controller = require('./userController');
 
 //////////// GET ////////////
-router.route('/').get(controller.get);
-router.route('/user').get(controller.getAll);
-router.route('/createadmin').post(controller.createAdmin)
-router.route('/new').post(controller.newUser)
+router.route('/').get(controller.getAll);
+router.route('/:userName').get(controller.get);
 
+//////////// PUT ////////////
+router.route('/').put(controller.newUser);
 
+//////////// POST ////////////
+router.route('/').post(controller.updateUser);
+
+//////////// DELETE ///////////
+//router.route('/').delete(controller.removeUser);
 
 module.exports = router;
