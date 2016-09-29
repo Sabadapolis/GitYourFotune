@@ -5,7 +5,7 @@ var defaults = {
     isPublished: true
 }
 
-function userDto(data) {
+function questionDto(data) {
     var self = this;
 
     // Sets the default values, defined above, to the data object we are passing in.
@@ -17,4 +17,4 @@ function userDto(data) {
     return self;
 }
 
-module.exports = userDto;
+module.exports = questionDto;

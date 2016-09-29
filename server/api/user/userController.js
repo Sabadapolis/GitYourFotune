@@ -45,7 +45,7 @@ exports.updateUser = function (req, res) {
             res.json(failure)
         });
 }
-
+/////////// DELETE ///////////
 exports.removeUser = function (req, res) {
     user.remove({ userName: req.body.userName }, function (error) {
         if (!error) {
