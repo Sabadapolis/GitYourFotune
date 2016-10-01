@@ -41,8 +41,8 @@ exports.updateQuestion = function (req, res) {
     question.update({ _id: req.body._id }, req.body).then(function (success) {
         res.json(success)
     }, function (failure) {
-            res.json(failure)
-        });
+        res.json(failure)
+    });
 }
 /////////// DELETE ///////////
 exports.removeQuestion = function (req, res) {
