@@ -6,8 +6,11 @@ router.route('/').get(controller.getAll);
 router.route('/:id').get(controller.get);
 router.route('/createTest').get(controller.createTest);
 
+//////////// PUT //////////
+router.route('/').put(controller.addAnswer);
+
 //////////// POST //////////
-router.route('/').post(controller.addAnswer);
+router.route('/').post(controller.updateAnswer);
 
 //////////// DELETE ///////////
 router.route('/').delete(controller.removeAnswer);

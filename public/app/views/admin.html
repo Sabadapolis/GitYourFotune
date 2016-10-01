@@ -1,0 +1,36 @@
+<div layout="row">
+    <div flex="50">
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Answers</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <table>
+                    <thead>
+                        <td>
+                            Answer
+                        </td>
+                        <td>
+                            Is Published?
+                        </td>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="answer in vm.answers">
+                            <td>
+                                {{answer.text}}
+                            </td>
+                            <td>
+                                <md-checkbox ng-checked="answer.isPublished" ng-click="vm.setAnswerPublish(answer, !answer.isPublished)" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div flex="50">
+        Column 2
+    </div>
+</div>

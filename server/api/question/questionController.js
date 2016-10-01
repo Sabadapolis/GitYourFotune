@@ -38,10 +38,9 @@ exports.newQuestion = function (req, res) {
 
 /////////// POST ////////////
 exports.updateQuestion = function (req, res) {
-    question.update({ updateQuestion: req.body.updateQuestion }, req.body).then(function (success) {
+    question.update({ _id: req.body._id }, req.body).then(function (success) {
         res.json(success)
-    },
-        function (failure) {
+    }, function (failure) {
             res.json(failure)
         });
 }

@@ -25,12 +25,12 @@ exports.getAll = function (req, res) {
 
 //////////// POST FUNCTIONS ////////////
 
-exports.addAnswer = function(req, res){
+exports.addAnswer = function (req, res) {
     // This will take the content of the body property from the request, and pass it into the DTO (Data Type Object) and convert 
     // the body into something we can use in code.
     var newAnswer = new answerDto(req.body);
 
-    answer.create({ addAnswer: req.body.addAnswer }, req.body).then(function (success) {
+    answer.create(newAnswer).then(function (success) {
         res.json(success)
     },
         function (failure) {
@@ -40,11 +40,20 @@ exports.addAnswer = function(req, res){
 
 //////////// TEST DATA FUNCTIONS ////////////
 
-exports.createTest = function (req, res, next){
-    answer.create({text: 'Test Question', isPublished: true}).then(function(success){
+exports.createTest = function (req, res, next) {
+    answer.create({ text: 'Test Question', isPublished: true }).then(function (success) {
         res.json('okay');
-    }, function(error){
+    }, function (error) {
         res.json('fail');
+    });
+}
+
+/////////// POST ////////////
+exports.updateAnswer = function (req, res) {
+    answer.update({ _id: req.body._id }, req.body).then(function (success) {
+        res.json(success)
+    }, function (failure) {
+        res.json(failure)
     });
 }
 

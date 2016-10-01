@@ -37,7 +37,8 @@ module.exports = function (grunt) {
         cssmin: {
             build: {
                 files: {
-                    'dist/style/site.min.css': 'dist/style/site.css'
+                    'dist/style/site.min.css': ['node_modules/angular-material/angular-material.css', 
+                                                'dist/style/site.css']
                 }
             }
         },
