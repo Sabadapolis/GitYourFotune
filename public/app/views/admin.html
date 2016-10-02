@@ -31,6 +31,34 @@
         </md-card>
     </div>
     <div flex="50">
-        Column 2
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Question</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <table>
+                    <thead>
+                        <td>
+                            Question
+                        </td>
+                        <td>
+                            Is Published?
+                        </td>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="question in vm.questions">
+                            <td>
+                                {{question.text}}
+                            </td>
+                            <td>
+                                <md-checkbox ng-checked="question.isPublished" ng-click="vm.setQuestionPublish(question, !question.isPublished)" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </md-card-content>
+        </md-card>
     </div>
 </div>
