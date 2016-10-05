@@ -1,6 +1,7 @@
 var question = require('./questionModel');
 var questionDto = require('./questionDTO');
-
+var answer = require('../answer/answerModel');
+var uniqueRandomArray = require('unique-random-array');
 //////////// GET FUNCTIONS ////////////
 
 exports.get = function (req, res) {
@@ -29,11 +30,17 @@ exports.newQuestion = function (req, res) {
 
     var newQuestion = new questionDto(req.body);
 
-    question.create(newQuestion).then(function (success) {
-        res.json(success);
-    }, function (error) {
-        res.json(error);
-    });
+    answer.find().then(function (success) {
+        var rand = new uniqueRandomArray(success);
+        newQuestion.answer = rand().text;
+        question.create(newQuestion).then(function (success) {
+            res.json(success);
+        }, function (error) {
+            res.json(error);
+        });
+    })
+
+
 }
 
 /////////// POST ////////////

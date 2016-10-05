@@ -18,7 +18,8 @@
         "angular-cookies": "*",
         "body-parser": "*",
         "bcrypt": "*",
-        "jsonwebtoken": "*"
+        "jsonwebtoken": "*", 
+        "unique-random-array": "*"
     },
     "devDependencies": {
         "grunt": "*",
