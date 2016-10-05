@@ -1,0 +1,28 @@
+<div layout="row" layout-align="center center">
+    <md-card flex="30">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Nodular Material</span>
+                <span class="md-subhead">Please log in.</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <div layout="row">
+                <md-input-container flex="100">
+                    <label>User Name</label>
+                    <input ng-model="vm.userName" type="text">
+                </md-input-container>
+            </div>
+            <div layout="row">
+                <md-input-container flex="100">
+                    <label>Password</label>
+                    <input ng-model="vm.password" type="password">
+                </md-input-container>
+            </div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button>Register</md-button>
+            <md-button class="md-raised md-primary" ng-click="vm.authenticate()">Log In</md-button>
+        </md-card-actions>
+    </md-card>
+</div>

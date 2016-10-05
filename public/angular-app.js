@@ -10,6 +10,12 @@ function AngularAppConfiguration($routeProvider, $locationProvider) {
             controller: 'mainController',
             controllerAs: 'vm'
         })
+        .when('/login', {
+            templateUrl: '/app/views/login.html',
+            controller: 'loginController',
+            controllerAs: 'vm', 
+            title: "Log In"
+        })
         .when('/admin', {
             templateUrl: '/app/views/admin.html', 
             controller: 'adminController', 

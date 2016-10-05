@@ -9,7 +9,7 @@ var config = {
 	
 	expireTime: 24 * 60 * 10,
 	secrets: {
-		jwt: process.env.JWT || 'Charzard'
+		jwt: process.env.JWT || '1b8a31a7-92ac-486d-88c7-01ba7fdb3d57'
 	}
 };
 
