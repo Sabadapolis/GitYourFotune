@@ -1,7 +1,7 @@
 angular.module('angularSPA').controller('mainController', MainController);
 
-MainController.$inject = ['testDataService'];
-function MainController(testDataService){
+MainController.$inject = ['eightballService'];
+function MainController(eightballService){
     var vm = this;
 
     vm.currentTime = '';

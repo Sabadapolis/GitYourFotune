@@ -28,6 +28,9 @@
                     </tbody>
                 </table>
             </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button ng-click = "vm.addAnswerClicked()"> Add Answer </md-button>
+                </md-card-actions>
         </md-card>
     </div>
     <div flex="50">
@@ -46,19 +49,28 @@
                         <td>
                             Is Published?
                         </td>
+                        <td>
+                            Answer
+                        </td>
                     </thead>
                     <tbody>
                         <tr ng-repeat="question in vm.questions">
                             <td>
-                                {{question.text}}
+                                {{question.question}}
                             </td>
                             <td>
                                 <md-checkbox ng-checked="question.isPublished" ng-click="vm.setQuestionPublish(question, !question.isPublished)" />
+                            </td>
+                            <td>
+                                {{question.answer}}
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button ng-click = "vm.addQuestionClicked()"> Add Question </md-button>
+            </md-card-actions>
         </md-card>
     </div>
 </div>

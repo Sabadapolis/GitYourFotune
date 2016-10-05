@@ -14,7 +14,8 @@
         "angular-aria": "*", 
         "angular-messages": "*", 
         "angular-animate": "*",
-        "body-parser": "*"
+        "body-parser": "*",
+        "unique-random-array": "*"
     }, 
     "devDependencies": {
         "grunt": "*", 

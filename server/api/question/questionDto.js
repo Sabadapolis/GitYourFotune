@@ -1,7 +1,8 @@
 var _ = require('lodash');
 
 var defaults = {
-    text: '', 
+    question: '', 
+    answer: '',
     isPublished: true
 }
 
@@ -11,7 +12,8 @@ function questionDto(data) {
     // Sets the default values, defined above, to the data object we are passing in.
     _.defaults(data, defaults);
 
-    self.text = data.text;
+    self.question = data.question;
+    self.answer = data.answer;
     self.isPublished = data.isPublished;
 
     return self;
