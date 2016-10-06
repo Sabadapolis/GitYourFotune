@@ -17,7 +17,7 @@
         "angular-animate": "*",
         "angular-cookies": "*",
         "body-parser": "*",
-        "bcrypt": "*",
+        "bcrypt-nodejs": "*",
         "jsonwebtoken": "*", 
         "unique-random-array": "*"
     },

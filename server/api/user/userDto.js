@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcrypt-nodejs');
 
 var defaults = {
     userName: '',
