@@ -1,5 +1,4 @@
 angular.module('angularSPA').controller('mainController', MainController);
-
 MainController.$inject = ['eightballService', '$mdDialog'];
 function MainController(eightballService, $mdDialog) {
     var vm = this;
@@ -17,5 +16,13 @@ function MainController(eightballService, $mdDialog) {
             .ariaLabel('Ask Question')
             .ok('I am ready Oh Great 8 Ball')
             .cancel('No... I am not ready..');
+
+        $mdDialog.show(eightBallPrompt).then(function(success){
+
+        });
+    }
+
+    function init(){
+        
     }
 }
