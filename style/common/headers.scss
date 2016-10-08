@@ -1,0 +1,13 @@
+.balls {
+    font-size: 25px;
+    color: darkblue;
+    background-color: black;
+
+    & > button {
+        font-size: 12px;
+
+        &:hover{
+            font-size: 15px;
+        }
+    }
+}

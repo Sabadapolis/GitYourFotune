@@ -1,18 +1,20 @@
-<div layout="column" layout-align="center">
-    <md-card flex="100">
+<div layout="row" flex="100" layout-align="center center">
+    <md-card flex="40">
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">Git Your Fortune</span>
             </md-card-title-text>
         </md-card-title>
         <md-card-content>
-            <table>
-                <thead>
-                    <td>
-                        Ask away Child
-                    </td>
-                </thead>
-            </table>
+            <div>
+                <md-input-container class="md-block">
+                    <label>What is your question?</label>
+                    <input ng-model="vm.question" type="text">
+                </md-input-container>
+            </div>
+            <div>
+                <span class="md-headline">{{vm.answer.answer}}</span>
+                </div>
         </md-card-content>
         <md-card-actions layout="row" layout-align="end center">
             <md-button ng-click="vm.askEightBall()">Balls</md-button>

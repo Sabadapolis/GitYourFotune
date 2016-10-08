@@ -1,24 +1,18 @@
 angular.module('angularSPA').controller('mainController', MainController);
-MainController.$inject = ['eightballService', '$mdDialog'];
-function MainController(eightballService, $mdDialog) {
+MainController.$inject = ['questionService', '$mdDialog'];
+function MainController(questionService, $mdDialog) {
     var vm = this;
 
     vm.askEightBall = _askEightBall;
+    vm.answer = null;
 
     init();
 
     ////////////
 
     function _askEightBall() {
-        var eightBallPrompt = $mdDialog.prompt()
-            .title('Ask your question, Child.')
-            .placeholder('Ask Question')
-            .ariaLabel('Ask Question')
-            .ok('I am ready Oh Great 8 Ball')
-            .cancel('No... I am not ready..');
-
-        $mdDialog.show(eightBallPrompt).then(function(success){
-
+        questionService.put({text: vm.question}).then(function(success){
+            vm.answer = success.data;
         });
     }
 
