@@ -9,8 +9,7 @@
             <div>
                 <md-input-container class="md-block">
                     <label>What is your question?</label>
-                    <input ng-model="vm.question" type="text">
-                    <input ng-keydown="$event.which === 13 && vm.askEightBall()"
+                    <input ng-model="vm.question" type="text" ng-keydown="$event.which === 13 && vm.askEightBall()">
                 </md-input-container>
             </div>
             <div>
