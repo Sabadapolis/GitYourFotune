@@ -1,5 +1,5 @@
 <div layout="row" flex="100" layout-align="center center">
-    <md-card flex="40">
+    <md-card flex="40" class=transwind>
         <md-card-title>
             <md-card-title-text>
                 <span class="md-headline">Git Your Fortune</span>
@@ -10,6 +10,7 @@
                 <md-input-container class="md-block">
                     <label>What is your question?</label>
                     <input ng-model="vm.question" type="text">
+                    <input ng-keydown="$event.which === 13 && vm.askEightBall()"
                 </md-input-container>
             </div>
             <div>
@@ -17,7 +18,7 @@
                 </div>
         </md-card-content>
         <md-card-actions layout="row" layout-align="end center">
-            <md-button ng-click="vm.askEightBall()">Balls</md-button>
+            <md-button ng-click="vm.askEightBall()">Ask</md-button>
         </md-card-actions>
     </md-card>
 </div>
