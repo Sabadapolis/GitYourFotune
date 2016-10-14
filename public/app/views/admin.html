@@ -1,6 +1,6 @@
 <div layout="row">
-    <div flex="50">
-        <md-card class=transwind>
+    <div flex="35">
+        <md-card class="transwind">
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">Answers</span>
@@ -33,8 +33,8 @@
             </md-card-actions>
         </md-card>
     </div>
-    <div flex="50">
-        <md-card class=transwind>
+    <div flex="65">
+        <md-card class="transwind">
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline">Question</span>
@@ -63,6 +63,8 @@
                             </td>
                             <td>
                                 {{question.answer}}
+                            </td>
+                            <td><md-button ng-click="delete(@vm.questions)">Delete</md-button>
                             </td>
                         </tr>
                     </tbody>
