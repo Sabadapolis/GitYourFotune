@@ -60,7 +60,7 @@ exports.updateAnswer = function (req, res) {
 /////////// DELETE ///////////
 
 exports.removeAnswer = function (req, res) {
-    answer.remove({ removeAnswer: req.body.userName }, function (error) {
+    answer.remove({ _id: req.body.id }, function (error) {
         if (!error) {
             res.json(error);
         }

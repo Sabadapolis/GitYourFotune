@@ -11,6 +11,8 @@ function AdminController(answerService, questionService, $mdDialog) {
     vm.setQuestionPublish = _setQuestionPublish;
     vm.addQuestionClicked = _addQuestionClicked;
     vm.addAnswerClicked = _addAnswerClicked;
+    vm.deleteQuestion = _deleteQuestion;
+    vm.deleteAnswer = _deleteAnswer;
 
     init();
 
@@ -56,6 +58,17 @@ function AdminController(answerService, questionService, $mdDialog) {
         });
     }
 
+function _deleteQuestion(_id){
+    questionService.delete({id:_id}).then(function(success){
+        init();
+    });
+}
+
+function _deleteAnswer(_id){
+    answerService.delete({id:_id}).then(function(success){
+        init();
+    });
+}
     function init() {
         answerService.get().then(function (data) {
             vm.answers = data.data;

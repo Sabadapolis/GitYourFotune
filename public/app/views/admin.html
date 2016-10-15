@@ -1,78 +1,88 @@
 <div layout="row">
-    <div flex="35">
-        <md-card class="transwind">
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Answers</span>
-                </md-card-title-text>
-            </md-card-title>
-            <md-card-content>
-                <table>
-                    <thead>
-                        <td>
-                            Answer
-                        </td>
-                        <td>
-                            Is Published?
-                        </td>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="answer in vm.answers">
-                            <td>
-                                {{answer.text}}
-                            </td>
-                            <td>
-                                <md-checkbox ng-checked="answer.isPublished" ng-click="vm.setAnswerPublish(answer, !answer.isPublished)" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </md-card-content>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button ng-click="vm.addAnswerClicked()"> Add Answer </md-button>
-            </md-card-actions>
-        </md-card>
-    </div>
-    <div flex="65">
-        <md-card class="transwind">
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Question</span>
-                </md-card-title-text>
-            </md-card-title>
-            <md-card-content>
-                <table>
-                    <thead>
-                        <td>
-                            Question
-                        </td>
-                        <td>
-                            Is Published?
-                        </td>
-                        <td>
-                            Answer
-                        </td>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="question in vm.questions">
-                            <td>
-                                {{question.question}}
-                            </td>
-                            <td>
-                                <md-checkbox ng-checked="question.isPublished" ng-click="vm.setQuestionPublish(question, !question.isPublished)" />
-                            </td>
-                            <td>
-                                {{question.answer}}
-                            </td>
-                            <td><md-button ng-click="delete(@vm.questions)">Delete</md-button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </md-card-content>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button ng-click="vm.addQuestionClicked()"> Add Question </md-button>
-            </md-card-actions>
-        </md-card>
-    </div>
+	<div flex="35">
+		<md-card class="graywind">
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-headline">Answers</span>
+				</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+				<table>
+					<thead>
+						<td>
+							Answer
+						</td>
+						<td>
+							Is Published?
+						</td>
+					</thead>
+					<tbody>
+						<tr ng-repeat="answer in vm.answers">
+							<td>
+								{{answer.text}}
+							</td>
+							<td>
+								<md-checkbox ng-checked="answer.isPublished" ng-click="vm.setAnswerPublish(answer, !answer.isPublished)" />
+							</td>
+							<td>
+								<td>
+									<md-button ng-click="vm.deleteAnswer(answer._id)">Delete</md-button>
+								</td>
+						</tr>
+					</tbody>
+				</table>
+			</md-card-content>
+			<md-card-actions layout="row" layout-align="end center">
+				<md-button ng-click="vm.addAnswerClicked()">
+					<img class="png-icon" src="images/addbutton.png">
+				</md-button>
+			</md-card-actions>
+		</md-card>
+	</div>
+	<div flex="65">
+		<md-card class="graywind">
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-headline">Question</span>
+				</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+				<table>
+					<thead>
+						<td>
+							Question
+						</td>
+						<td>
+							Is Published?
+						</td>
+						<td>
+							Answer
+						</td>
+					</thead>
+					<tbody>
+						<tr ng-repeat="question in vm.questions">
+							<td>
+								{{question.question}}
+							</td>
+							<td>
+								<md-checkbox ng-checked="question.isPublished" ng-click="vm.setQuestionPublish(question, !question.isPublished)" />
+							</td>
+							<td>
+								{{question.answer}}
+							</td>
+							<td>
+								<md-button ng-click="vm.deleteQuestion(question._id)">Delete</md-button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</md-card-content>
+			<md-card-actions layout="row" layout-align="end center">
+				<md-button ng-click="vm.addQuestionClicked()">
+					<img class="png-icon" src="images/addbutton.png">
+
+				</md-button>
+			</md-card-actions>
+		</md-card>
+	</div>
 </div>

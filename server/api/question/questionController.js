@@ -53,7 +53,7 @@ exports.updateQuestion = function (req, res) {
 }
 /////////// DELETE ///////////
 exports.removeQuestion = function (req, res) {
-    question.remove({ removeQuestion: req.body.removeQuestion }, function (error) {
+    question.remove({ _id: req.body.id }, function (error) {
         if (!error) {
             res.json(error);
         }

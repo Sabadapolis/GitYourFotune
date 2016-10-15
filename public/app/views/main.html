@@ -1,24 +1,23 @@
 <div layout="row" flex="100" layout-align="center center">
-    <md-card flex="40" class="transwind">
-        <md-card-title>
-            <img src="logo.jpg">
-            <md-card-title-text>
-                <span class="md-headline">Git Your Fortune</span>
-            </md-card-title-text>
-        </md-card-title>
-        <md-card-content>
-            <div>
-                <md-input-container class="md-block">
-                    <label>What is your question?</label>
-                    <input ng-model="vm.question" type="text" ng-keydown="$event.which === 13 && vm.askEightBall()">
-                </md-input-container>
-            </div>
-            <div>
-                <span class="md-headline">{{vm.answer.answer}}</span>
-                </div>
-        </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
-            <md-button ng-click="vm.askEightBall()">Ask</md-button>
-        </md-card-actions>
-    </md-card>
+	<md-card flex="40" class="transwind">
+		<md-card-title>
+			<img src="images/logo1.jpg">
+		</md-card-title>
+		<md-card-content>
+			<div>
+				<md-input-container class="md-block">
+					<label>What is your question?</label>
+					<input ng-model="vm.question" type="text" ng-keydown="$event.which === 13 && vm.askEightBall()">
+				</md-input-container>
+			</div>
+			<div>
+				<span class="md-headline">{{vm.answer.answer}}</span>
+			</div>
+		</md-card-content>
+		<md-card-actions layout="row" layout-align="end center">
+			<md-button ng-click="vm.askEightBall()">
+				<img class="png-icon" src="images/askbutton.png">
+			</md-button>
+		</md-card-actions>
+	</md-card>
 </div>
