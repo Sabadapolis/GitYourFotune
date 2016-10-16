@@ -17,11 +17,18 @@
 body{
     background-color: black;
     background-image: url(/images/the-eight-ball.jpg);
-    background-size: cover
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .transwind{
     background-color: transparent;
 }
 .graywind{
     background-color: lightgray;
+    opacity: 0.8;
+    overflow: auto;
+}
+.scroll-this{
+    overflow: auto;
 }
