@@ -33,8 +33,8 @@ function AdminController(answerService, questionService, $mdDialog) {
         .title('Add A Question')
         .placeholder('Type Question Here')
         .ariaLabel('Type Question Here')
-        .ok('Okay! Ryan likes balls!')
-        .cancel('Cancel but Ryan STILL likes balls');
+        .ok('Add Question')
+        .cancel('Cancel');
 
         $mdDialog.show(questionPrompt).then(function (question) {
             questionService.put({question:question}).then(function () {
@@ -48,8 +48,8 @@ function AdminController(answerService, questionService, $mdDialog) {
         .title('Add an Anwer')
         .placeholder('Type Answer Here')
         .ariaLabel('Type Answer Here')
-        .ok('Okay! Ryan likes wieners!')
-        .cancel('Cancel but Ryan STILL likes wieners!');
+        .ok('Add Answer')
+        .cancel('Cancel');
 
         $mdDialog.show(answerPrompt).then(function (answer) {
             answerService.put({text:answer}).then(function () {
