@@ -13,6 +13,11 @@ function MainController(questionService, $mdDialog) {
     function _askEightBall() {
         questionService.put({text: vm.question}).then(function(success){
             vm.answer = success.data;
+
+            $scope.$watch('vm.question', function(newValue, oldValue){
+                if(newValue === "")
+                return("!vm.questionService");
+            });
         });
     }
 
