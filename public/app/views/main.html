@@ -23,13 +23,20 @@
 </div>
 <div layout="row" flex="30" flex-order="2" layout-align="end end">
 	<md-card class="graywind">
-		<md-card-title>
-			<md-card-title-text>
-				<span class="md-headline">Last 5 Questions</span>
-			</md-card-title-text>
-		</md-card-title>
 		<md-card-content>
-
+			<table>
+				<thead>
+					<td>
+						Last 5 Questions
+					</td>
+				</thead>
+				<tbody>
+					<tr ng-repeat="question in vm.lastFive">
+						<td>
+							{{question.text}}
+						</td>
+				</tbody>
+			</table>
 		</md-card-content>
 	</md-card>
 </div>
