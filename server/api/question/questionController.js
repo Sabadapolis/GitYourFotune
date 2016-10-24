@@ -24,7 +24,7 @@ exports.getAll = function (req, res) {
 }
 
 exports.getLastFive = function (req, res){
-    var q = question.find({}).
+  //  var q = question.find({}).
 }
 
 

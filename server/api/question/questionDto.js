@@ -3,7 +3,8 @@ var _ = require('lodash');
 var defaults = {
     question: '', 
     answer: '',
-    isPublished: true
+    isPublished: true,
+    insertDate: new Date()
 }
 
 function questionDto(data) {
@@ -15,6 +16,7 @@ function questionDto(data) {
     self.question = data.question;
     self.answer = data.answer;
     self.isPublished = data.isPublished;
+    self.insertDate = data.insertDate;
 
     return self;
 }
