@@ -21,7 +21,10 @@ exports.getAll = function (req, res) {
     }, function (error) {
         res.json(error);
     })
+}
 
+exports.getLastFive = function (req, res){
+    var q = question.find({}).
 }
 
 

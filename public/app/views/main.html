@@ -31,9 +31,9 @@
 					</td>
 				</thead>
 				<tbody>
-					<tr ng-repeat="question in vm.lastFive">
+					<tr ng-repeat="question in vm.questions">
 						<td>
-							{{question.text}}
+							{{question.question}} - {{question.answer}}
 						</td>
 				</tbody>
 			</table>

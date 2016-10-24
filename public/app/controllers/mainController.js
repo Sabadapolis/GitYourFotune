@@ -24,13 +24,13 @@ function MainController(questionService, $mdDialog) {
         }
     }
 
-function _lastFive(_id){
-            questionService.get({id:_id}).then(function (success) {
-            vm.questions = data.text;
-        }
-);}
+    function _lastFive() {
+        questionService.get().then(function (success) {
+            vm.questions = success.data.slice(0, 4);
+        });
+    }
 
     function init() {
-
+        _lastFive();
     }
 }
