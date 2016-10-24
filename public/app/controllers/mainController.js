@@ -24,8 +24,8 @@ function MainController(questionService, $mdDialog) {
         }
     }
 
-function _lastFive(){
-            questionService.get({ text:vm.question }).then(function (success) {
+function _lastFive(_id){
+            questionService.get({ text: vm.question }).then(function (success) {
             vm.questions = data.text;
         }
 );}
