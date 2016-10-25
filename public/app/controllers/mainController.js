@@ -15,7 +15,7 @@ function MainController(questionService, $mdDialog) {
 
     function _askEightBall() {
         if (vm.question) {
-            questionService.put({ text: vm.question }).then(function (success) {
+            questionService.put({ question: vm.question }).then(function (success) {
                 vm.answer = success.data;
             });
         }
